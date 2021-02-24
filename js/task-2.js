@@ -6,13 +6,23 @@ const ingredients = ['Картошка', 'Грибы', 'Чеснок', 'Поми
 
 const ingradientsEl = document.querySelector('#ingredients');
 
-const elements = [];
-ingredients.map(ingradient => {
+// const elements = [];
+// ingredients.map(ingradient => {
+//   const ingradientEl = document.createElement('li');
+//   ingradientEl.textContent = ingradient;
+//   elements.push(ingradientEl);
+//   console.log(ingradientEl);
+//   console.log(ingredients);
+//   console.log(elements);
+// });
+// ingradientsEl.append(...elements);
+
+//правильное решение
+
+const elements = ingredients.map(ingradient => {
   const ingradientEl = document.createElement('li');
   ingradientEl.textContent = ingradient;
-  elements.push(ingradientEl);
+  return ingradientEl;
 });
 
 ingradientsEl.append(...elements);
-
-console.log(ingradientsEl);

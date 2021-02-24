@@ -10,7 +10,7 @@ inputEl.addEventListener('blur', function inputOut() {
 });
 
 function checkNumber(num) {
-  if (num == inputEl.getAttribute('data-length')) {
+  if (num === +inputEl.getAttribute('data-length')) {
     inputEl.classList.add('valid');
     inputEl.classList.remove('invalid');
   } else {

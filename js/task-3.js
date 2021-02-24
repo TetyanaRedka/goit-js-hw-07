@@ -23,16 +23,14 @@ const images = [
 const listEl = document.querySelector('#gallery');
 listEl.classList.add('img-list');
 
-const elements = [];
-
-images.map(element => {
+const elements = images.map(element => {
   const linkEl = document.createElement('li');
   const imgEl = document.createElement('img');
   linkEl.appendChild(imgEl);
   imgEl.src = element.url;
   imgEl.alt = element.alt;
   linkEl.classList.add('img-style');
-  elements.push(linkEl);
+  return linkEl;
 });
 
 listEl.append(...elements);

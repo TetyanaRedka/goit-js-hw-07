@@ -7,8 +7,10 @@ const inputName = document.querySelector('#name-input');
 inputName.addEventListener('input', changeName);
 
 function changeName() {
-  userName.textContent = event.currentTarget.value;
-  if (userName.textContent === '') {
-    userName.textContent = 'незнакомец';
-  }
+  //вариант длиннее
+  // userName.textContent = event.currentTarget.value;
+  // if (userName.textContent === '') {
+  //   userName.textContent = 'незнакомец';
+  //}
+  userName.textContent = event.currentTarget.value || 'незнакомец';
 }
